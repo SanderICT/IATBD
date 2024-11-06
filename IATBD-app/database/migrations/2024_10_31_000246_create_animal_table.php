@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string("name");
             $table->integer("age");
             $table->string("kind");
+            $table->decimal('payment', 5, 2);
+            $table->integer("durationInHours");
             $table->unsignedBigInteger("owner");
             $table->longText("note");
 
@@ -29,9 +31,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('animals', function (Blueprint $table) {
-            $table->dropForeign('animals_kind_foreign');
-            $table->dropForeign('animals_owner_foreign');
+        Schema::table('animal', function (Blueprint $table) {
+            $table->dropForeign('animal_kind_foreign');
+            $table->dropForeign('animal_owner_foreign');
         });
         Schema::dropIfExists('animal');
     }

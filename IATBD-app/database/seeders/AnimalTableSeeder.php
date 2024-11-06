@@ -17,6 +17,8 @@ class AnimalTableSeeder extends Seeder
             "name" => "Henry",
             "age" => 5,
             "kind" => "Dog",
+            "payment" => 10,
+            "durationInHours" => 2,
             "owner" => 1,
             "note" => "Moet medicijnen innemen met avond eten (rond 18.30 - 19.30)"
         ]);
@@ -24,6 +26,8 @@ class AnimalTableSeeder extends Seeder
             "name" => "Blub",
             "age" => 2,
             "kind" => "Fish",
+            "payment" => 12.50,
+            "durationInHours" => 1,
             "owner" => 2,
             "note" => ""
         ]);
@@ -31,6 +35,8 @@ class AnimalTableSeeder extends Seeder
             "name" => "Boris",
             "age" => 3,
             "kind" => "Cat",
+            "payment" => 5,
+            "durationInHours" => 4,
             "owner" => 2,
             "note" => "Kijkt soms iets te veel naar Blub...."
         ]);

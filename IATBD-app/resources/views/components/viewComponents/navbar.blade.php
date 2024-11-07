@@ -6,7 +6,7 @@
             <ul>
                 <li><a class="navbar" href="/dashboard">Home</a></li>
                 <li><a class="navbar" href="/profile">Mijn Profiel</a></li>
-                <li><a class="navbar" href="/pets">Mijn Huisdieren</a></li>
+                <li><a class="navbar" href="{{ route('mijnHuisdieren') }}">Mijn Huisdieren</a></li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" >
                         @csrf

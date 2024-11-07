@@ -28,7 +28,8 @@
             <div class="action-card">
                 <h2>Voeg Je Huisdier Toe</h2>
                 <p>Plaats een zoekopdracht voor een oppas voor jouw huisdier met alle nodige informatie.</p>
-                <a href="/add-pet" class="cta-button">Huisdier Toevoegen</a>
+                <a href="{{ route('maakHuisdier') }}" class="cta-button">Huisdier Toevoegen</a>
+
             </div>
 
             <!-- Nieuwe knop die naar dier-oppasser pagina leidt -->

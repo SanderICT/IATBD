@@ -20,10 +20,16 @@ return new class extends Migration
             $table->integer("durationInHours");
             $table->unsignedBigInteger("owner");
             $table->longText("note");
-
+            $table->string("media")->default("/media/Animals/Dog_Breeds.jpg");
+            
+            // Voeg timestamps toe
+            $table->timestamps();
+        
+            // Definieer de foreign keys
             $table->foreign("kind")->references("kind")->on("animal_species");
             $table->foreign("owner")->references('id')->on("users");
         });
+        
     }
 
     /**

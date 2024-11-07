@@ -9,8 +9,11 @@ class Animal extends Model
 {
     use HasFactory;
 
-    protected $table = 'animal';  // Specificeer de tabelnaam
+    protected $table = 'animal';
 
-    // Geef aan welke velden massaal toegewezen kunnen worden
-    protected $fillable = ['name', 'age', 'kind', 'payment', 'durationInHours',  'owner', 'note'];
+    protected $fillable = ['name', 'age', 'kind', 'payment', 'durationInHours', 'owner', 'note', 'media'];
+
+    // Zet timestamps uit
+    public $timestamps = false;
 }
+

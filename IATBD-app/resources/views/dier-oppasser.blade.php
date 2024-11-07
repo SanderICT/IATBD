@@ -46,6 +46,7 @@
                 @foreach ($animals as $animal)
                     <div class="pet-card">
                         <div class="pet-info">
+                            <img src="<?= ucfirst($animal->media); ?>" class="img-card" alt="pet">
                             <h3>{{ $animal->name }}</h3> <!-- Gebruik hier $animal, niet $pet -->
                             <p><strong>Soort:</strong> {{ ucfirst($animal->kind) }}</p> <!-- Gebruik $animal->kind -->
                             <p><strong>oppastijd:</strong> {{ $animal->durationInHours }} uur</p>

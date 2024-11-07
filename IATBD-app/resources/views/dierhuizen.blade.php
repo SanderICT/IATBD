@@ -19,17 +19,18 @@
 
             <!-- Huisdieren Overzicht -->
             <div class="pet-list">
-                @foreach ($animals as $animal)
+                @foreach ($Home as $home)
                     <div class="pet-card">
                         <div class="pet-info">
-                            <h3>{{ $animal->name }}</h3> <!-- Gebruik hier $animal, niet $pet -->
-                            <p><strong>Soort:</strong> {{ ucfirst($animal->kind) }}</p> <!-- Gebruik $animal->kind -->
-                            <p><strong>oppastijd:</strong> {{ $animal->durationInHours }} uur</p>
-                            <p><strong>uurtarief:</strong> ${{ $animal->payment }},-</p> <!-- Gebruik $animal->location -->
-                            <p><strong>Notitie:</strong> {{ $animal->note }}</p> <!-- Gebruik $animal->note -->
+                            <img src="<?= ucfirst($home->media); ?>" class="img-card" alt="home">
+
+                            <p><strong>media:</strong> {{ ucfirst($home->media) }}</p> 
+                            <p><strong>stad:</strong> {{ $home->city }}</p>
+                            <p><strong>address:</strong> {{ $home->address }}</p> 
+                            
                         </div>
                         <div class="pet-actions">
-                            <a href="{{ route('animal.animalID', $animal->animalID) }}" class="cta-button">Bekijk Details</a> 
+                            <a href="{{ route('home.address', $home->address) }}" class="cta-button">Bekijk Details</a> 
                         </div>
                     </div>
                 @endforeach

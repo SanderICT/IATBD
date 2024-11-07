@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string("address")->unique();
             $table->string("city");
             $table->unsignedBigInteger("owner");
+            $table->string("media")->default("/media/Locations/home1.jpg");
 
             $table->foreign("owner")->references("id")->on("users");
         });

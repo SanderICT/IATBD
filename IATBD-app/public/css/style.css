@@ -7,7 +7,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
     background-color: #6b8e23;
@@ -115,31 +115,17 @@ body {
     color: #6b8e23;
 }
 
-/* Footer */
-.footer {
-    bottom: 0px;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-}
-
-.footer nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.footer nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 /* -----------------------------------------dier-oppasser.blade.php----------------------------------------------------------- */
 
-/* Voeg wat stijlen toe in style.css */
+.dier-oppasser-content{
+    display: flex;
+    justify-content: center;
+}
+
+.available-pets{
+    width: 80%;
+}
+
 .pet-list {
     display: flex;
     flex-wrap: wrap;
@@ -149,8 +135,101 @@ body {
 .pet-card {
     border: 1px solid #ddd;
     padding: 10px;
-    width: 250px;
+    width: 350px;
     border-radius: 8px;
     background-color: #fff;
+}
+
+.img-card{
+    width: 100%;
+    border-radius: 8px;
+}
+
+p{
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+}
+
+
+/* maakhuisdier */
+
+/* Algemeen resetten van marges en padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basisstijl voor de body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container voor het formulier */
+.add-pet-content {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Titel */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+/* Formuliergroep */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input velden en textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+}
+
+/* Textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Button */
+.cta-button {
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container{
+    padding: 2rem;
 }
 

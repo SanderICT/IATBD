@@ -9,11 +9,12 @@
 <body>
     <x-viewComponents.navbar />
     <h1>Mijn Profiel</h1>
+    <h2>Mijn Huizen</h2>
     <main class="dier-oppasser-content">
-
+        
         <!-- Display list of homes -->
         <section class="available-pets">
-            <h2>Mijn Huizen</h2>
+            
             
             @forelse ($houses as $home)
                 <div class="pet-card">

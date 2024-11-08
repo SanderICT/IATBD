@@ -9,8 +9,8 @@ class Animal extends Model
 {
     use HasFactory;
 
-    protected $table = 'animal';  // De naam van de tabel
-    protected $primaryKey = 'animalID';  // De primaire sleutel is niet 'id', maar 'animalID'
+    protected $table = 'animal';
+    protected $primaryKey = 'animalID'; 
 
     protected $fillable = ['name', 'age', 'kind', 'payment', 'durationInHours', 'owner', 'note', 'media'];
 

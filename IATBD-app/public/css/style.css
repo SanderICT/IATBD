@@ -124,6 +124,10 @@ body {
 
 .available-pets{
     width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3rem;
 }
 
 .pet-list {
@@ -143,6 +147,7 @@ body {
 .img-card{
     width: 100%;
     border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 p{
@@ -364,10 +369,12 @@ form button {
 
 .img-detail {
     width: 100%;
-    max-width: 24%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
 }
+
+
 
 .error-message {
     color: red;
@@ -385,4 +392,14 @@ form button {
     height: auto;
     max-width: 200px; /* Pas dit aan afhankelijk van de gewenste grootte */
     border-radius: 8px; /* Optioneel voor ronde hoeken */
+}
+
+.pet-card:hover .img-card{
+    scale: 1.05;
+}
+
+@media only screen and (max-width: 900px) {
+    .animal-wrapper {
+        flex-direction: column;
+    }
 }

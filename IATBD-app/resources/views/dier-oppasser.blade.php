@@ -21,24 +21,24 @@
                         $selectedTypes = request()->get('animal_type') ?? [];
                     @endphp
                     <div>
-                        <input type="checkbox" name="animal_type[]" value="dog" id="dog" 
-                               {{ in_array('dog', (array) $selectedTypes) ? 'checked' : '' }}>
-                        <label for="dog">Hond</label>
+                        <input type="checkbox" name="animal_type[]" value="hond" id="hond" 
+                               {{ in_array('hond', (array) $selectedTypes) ? 'checked' : '' }}>
+                        <label for="hond">Hond</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="animal_type[]" value="cat" id="cat" 
-                               {{ in_array('cat', (array) $selectedTypes) ? 'checked' : '' }}>
-                        <label for="cat">Kat</label>
+                        <input type="checkbox" name="animal_type[]" value="kat" id="kat" 
+                               {{ in_array('kat', (array) $selectedTypes) ? 'checked' : '' }}>
+                        <label for="kat">Kat</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="animal_type[]" value="bird" id="bird" 
-                               {{ in_array('bird', (array) $selectedTypes) ? 'checked' : '' }}>
-                        <label for="bird">Vogel</label>
+                        <input type="checkbox" name="animal_type[]" value="vogel" id="vogel" 
+                               {{ in_array('vogel', (array) $selectedTypes) ? 'checked' : '' }}>
+                        <label for="vogel">Vogel</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="animal_type[]" value="other" id="other" 
-                               {{ in_array('other', (array) $selectedTypes) ? 'checked' : '' }}>
-                        <label for="other">Anders</label>
+                        <input type="checkbox" name="animal_type[]" value="anders" id="anders" 
+                               {{ in_array('anders', (array) $selectedTypes) ? 'checked' : '' }}>
+                        <label for="anders">Anders</label>
                     </div>
                 </div>
                 

@@ -16,7 +16,7 @@ class AnimalTableSeeder extends Seeder
         DB::table('animal')->insert([
             "name" => "Henry",
             "age" => 5,
-            "kind" => "Dog",
+            "kind" => "hond",
             "payment" => 10,
             "durationInHours" => 2,
             "owner" => 1,
@@ -25,7 +25,7 @@ class AnimalTableSeeder extends Seeder
         DB::table('animal')->insert([
             "name" => "Blub",
             "age" => 2,
-            "kind" => "Fish",
+            "kind" => "vis",
             "payment" => 12.50,
             "durationInHours" => 1,
             "owner" => 2,
@@ -34,7 +34,7 @@ class AnimalTableSeeder extends Seeder
         DB::table('animal')->insert([
             "name" => "Boris",
             "age" => 3,
-            "kind" => "Cat",
+            "kind" => "kat",
             "payment" => 5,
             "durationInHours" => 4,
             "owner" => 2,

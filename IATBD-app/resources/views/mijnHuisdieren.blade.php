@@ -22,8 +22,8 @@
                 @foreach ($animals as $animal)
                     <div class="pet-card">
                         <!-- Toon de afbeelding van het huisdier -->
-                        <div class="pet-image">
-                            <img src="{{ asset( $animal->media) }}" alt="Foto van {{ $animal->name }}" class="pet-img">
+                        <div class="img-card">
+                            <img src="{{ asset( $animal->media) }}" alt="Foto van {{ $animal->name }}" class="img-card">
                         </div>
 
                         <h3>{{ $animal->name }}</h3>

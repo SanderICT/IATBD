@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './custom.css';
+
+/* Standaard achtergrondkleur voor licht thema */
+body {
+    background-color: #6b8e23; /* Groene achtergrond */
+    color: black; /* Zwarte tekst */
+}
+
+/* Stijl voor donker thema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(66, 146, 66); /* Groene achtergrond in donker thema */
+        color: black; /* Zwarte tekst */
+    }
+
+    /* Specifieke styling voor donkere modus op bepaalde elementen */
+    .dark\:bg-gray-900 {
+        background-color: rgb(247, 247, 247) !important;
+        color: black;
+    }
+
+    .dark\:bg-gray-800 {
+        background-color: rgb(66, 146, 66) !important;
+        color: black;
+    }
+}
+

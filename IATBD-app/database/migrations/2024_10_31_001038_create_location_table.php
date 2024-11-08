@@ -17,7 +17,11 @@ return new class extends Migration
             $table->unsignedBigInteger("owner");
             $table->string("media")->default("/media/Locations/home1.jpg");
 
-            $table->foreign("owner")->references("id")->on("users");
+            // Specificeer een unieke naam voor de foreign key
+            $table->foreign("owner", 'location_owner_unique_foreign') // Geef een unieke naam op
+                  ->references("id")
+                  ->on("users")
+                  ->onDelete('cascade');
         });
     }
 
@@ -27,7 +31,8 @@ return new class extends Migration
     public function down(): void
     {   
         Schema::table('location', function (Blueprint $table) {
-            $table->dropForeign('location_owner_foreign');
+            // Verwijder de foreign key door de naam te gebruiken
+            $table->dropForeign('location_owner_unique_foreign');
         });
         Schema::dropIfExists('location');
     }

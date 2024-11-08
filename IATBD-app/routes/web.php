@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/mijn-huisdieren', [PetController::class, 'index'])->name('mijnHuisdieren');
     Route::get('/mijn-huisdieren/nieuw', [PetController::class, 'create'])->name('maakHuisdier');
     Route::post('/mijn-huisdieren', [PetController::class, 'store'])->name('huisdieren.store');
+
+    // Route voor het toevoegen van een huis (alleen toegankelijk voor geauthenticeerde gebruikers)
+    Route::middleware('auth')->group(function () {
+        Route::get('/huis-toevoegen', [HomeController::class, 'create'])->name('home.create');
+        Route::post('/huis-toevoegen', [HomeController::class, 'store'])->name('home.store');
+    });
+
+    Route::get('/owner_profile', [UserController::class, 'index'])->name('profile');
+
 
     // Profiel bewerken en verwijderen
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

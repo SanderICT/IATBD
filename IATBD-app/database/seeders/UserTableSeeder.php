@@ -14,6 +14,7 @@ class UserTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
+            "id" => 1,
             "firstname" => "Melissa",
             "lastname" => "Parker",
             "username" => "smileymelly",
@@ -22,6 +23,7 @@ class UserTableSeeder extends Seeder
             'media' => '/media/Users/Melissa.jpg',
         ]);
         DB::table('users')->insert([
+            "id" => 2,
             "firstname" => "Randy",
             "lastname" => "Reid",
             "username" => "Randeid",
@@ -30,6 +32,7 @@ class UserTableSeeder extends Seeder
             "role" => "admin",
         ]);
         DB::table('users')->insert([
+            "id" => 3,
             "firstname" => "Sander",
             "lastname" => "Haaksman",
             "username" => "SanderSan",

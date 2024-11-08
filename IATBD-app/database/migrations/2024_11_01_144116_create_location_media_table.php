@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('location_media', function (Blueprint $table) {
             $table->string("location");
-            $table->string("media")->default("/media/Locations/noimage.png");
-
+            $table->string("media")->default("/media/Locations/home1.jpg");
             $table->foreign("location")->references("address")->on("location");
         });
     }

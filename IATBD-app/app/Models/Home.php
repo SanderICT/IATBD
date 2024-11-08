@@ -9,8 +9,21 @@ class Home extends Model
 {
     use HasFactory;
 
-    protected $table = 'location';  // Specificeer de tabelnaam
+    protected $table = 'location';
+    public $timestamps = false;
 
-    // Geef aan welke velden massaal toegewezen kunnen worden
     protected $fillable = ['address', 'city', 'owner', 'media'];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner', 'id');
+    }
+
+
+    // Relatie met location_media voor meerdere afbeeldingen
+    public function media()
+    {
+        return $this->hasMany(LocationMedia::class, 'location', 'address');
+    }
+
 }

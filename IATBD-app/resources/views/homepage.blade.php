@@ -43,10 +43,6 @@
         <!-- Extra functies -->
         <section class="features">
             <div class="feature">
-                <h3>Oppassers Profielen</h3>
-                <p>Bekijk profielen van betrouwbare oppassers, compleet met foto's en video's.</p>
-            </div>
-            <div class="feature">
                 <h3>Reviews en Beoordelingen</h3>
                 <p>Lees beoordelingen van eerdere oppassers om de beste keuze te maken voor jouw huisdier.</p>
             </div>

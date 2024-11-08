@@ -5,7 +5,7 @@
         <nav class="nav">
             <ul>
                 <li><a class="navbar" href="/dashboard">Home</a></li>
-                <li><a class="navbar" href="/profile">Mijn Profiel</a></li>
+                <li><a class="navbar" href="/owner_profile">Mijn Profiel</a></li>
                 <li><a class="navbar" href="{{ route('mijnHuisdieren') }}">Mijn Huisdieren</a></li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" >

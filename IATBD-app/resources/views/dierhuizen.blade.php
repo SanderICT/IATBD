@@ -19,12 +19,11 @@
 
             <!-- Huisdieren Overzicht -->
             <div class="pet-list">
-                @foreach ($Home as $home)
+                @foreach ($home as $home)
                     <div class="pet-card">
                         <div class="pet-info">
                             <img src="<?= ucfirst($home->media); ?>" class="img-card" alt="home">
 
-                            <p><strong>media:</strong> {{ ucfirst($home->media) }}</p> 
                             <p><strong>stad:</strong> {{ $home->city }}</p>
                             <p><strong>address:</strong> {{ $home->address }}</p> 
                             

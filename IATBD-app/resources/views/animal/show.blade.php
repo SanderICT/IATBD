@@ -10,9 +10,9 @@
     <x-viewComponents.navbar />
     <main class="animal-details">
         <section class="animal-wrapper">
-            <h1>{{ $animal->name }}</h1>
             <img src="{{ ucfirst($animal->media) }}" alt="{{ $animal->name }} foto" class="img-detail">
             <div>
+                <h1>{{ $animal->name }}</h1>
                 <p><strong>Soort:</strong> {{ ucfirst($animal->kind) }}</p>
                 <p><strong>Leeftijd:</strong> {{ $animal->age }} jaar</p>
                 <p><strong>Oppastijd:</strong> {{ $animal->durationInHours }} uur</p>

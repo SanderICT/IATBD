@@ -245,7 +245,7 @@ body {
 .animal-details {
     width: 80%;
     margin: 30px auto;
-    padding: 20px;
+    padding: 50px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -265,7 +265,6 @@ body {
 .img-detail {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -350,5 +349,22 @@ form button {
 
 .animal-wrapper{
     display: flex;
+    justify-content: space-around;
 }
 
+.animal-info{
+    transform: translateX(-5rem);
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.img-detail {
+    width: 100%;
+    max-width: 24%;
+    height: auto;
+    border-radius: 8px;
+}

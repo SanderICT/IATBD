@@ -9,11 +9,16 @@ class Animal extends Model
 {
     use HasFactory;
 
-    protected $table = 'animal';
+    protected $table = 'animal';  // De naam van de tabel
+    protected $primaryKey = 'animalID';  // De primaire sleutel is niet 'id', maar 'animalID'
 
     protected $fillable = ['name', 'age', 'kind', 'payment', 'durationInHours', 'owner', 'note', 'media'];
 
-    // Zet timestamps uit
     public $timestamps = false;
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'animal_id', 'animalID');
+    }
 }
+
 

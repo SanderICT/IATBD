@@ -35,6 +35,10 @@ Route::get('find-houses/{address}', [HomeController::class, 'show'])->name('home
 
 // Route voor het bekijken van een specifiek dier op basis van animalID
 Route::get('/animal/{animalID}', [AnimalController::class, 'show'])->name('animal.animalID');
+Route::post('/animal/{animalID}/reageren', [AnimalController::class, 'reageren'])->name('animal.reageren');
+Route::post('/pet-sitting-request/{requestID}/accept', [AnimalController::class, 'acceptRequest'])->name('pet-sitting.accept');
+Route::post('/pet-sitting-request/{requestID}/reject', [AnimalController::class, 'rejectRequest'])->name('pet-sitting.reject');
+
 
 // Routes voor "Mijn Huisdieren" pagina (alleen toegankelijk voor geauthenticeerde gebruikers)
 Route::middleware('auth')->group(function () {

@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string("location");
-            $table->longText("review");
+            $table->foreignId('animal_id')->constrained('animal', 'animalID')->onDelete('cascade'); // Gebruik 'animalID' als de primaire sleutel
+            $table->longText('review');
             $table->integer('rating');
+            $table->string('location'); 
             $table->timestamps();
-
-            $table->foreign("location")->references("address")->on("location");
         });
     }
 
@@ -27,9 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('reviews', function (Blueprint $table) {
-            $table->dropForeign('reviews_location_foreign');
-        });
         Schema::dropIfExists('reviews');
     }
 };

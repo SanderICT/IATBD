@@ -233,3 +233,122 @@ h1 {
     padding: 2rem;
 }
 
+/* Algemene styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hoofd sectie styling */
+.animal-details {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titel */
+.animal-details h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Afbeelding van het dier */
+.img-detail {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Algemene tekst styling */
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Specifieke opmaak voor sterkere teksten (zoals kopjes) */
+strong {
+    color: #333;
+}
+
+/* Formulier knop */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Styling voor sectie na acceptatie van het verzoek */
+.review {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Recensie formulier */
+.review textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #333;
+    resize: none;
+}
+
+/* Status melding */
+.status {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Verwijder de standaard marges en padding van de form */
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Button voor reactie */
+form button {
+    width: 100%;
+    text-align: center;
+}
+
+.animal-wrapper{
+    display: flex;
+}
+

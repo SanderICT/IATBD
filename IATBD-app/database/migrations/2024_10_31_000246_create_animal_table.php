@@ -25,6 +25,9 @@ return new class extends Migration
             // Voeg timestamps toe
             $table->timestamps();
         
+            // Voeg de 'is_accepted' kolom toe
+            $table->boolean('is_accepted')->default(false); 
+            
             // Definieer de foreign keys
             $table->foreign("kind")->references("kind")->on("animal_species");
             $table->foreign("owner")->references('id')->on("users");
@@ -36,11 +39,13 @@ return new class extends Migration
      * Reverse the migrations.
      */
     public function down(): void
-    {
-        Schema::table('animal', function (Blueprint $table) {
-            $table->dropForeign('animal_kind_foreign');
-            $table->dropForeign('animal_owner_foreign');
-        });
-        Schema::dropIfExists('animal');
-    }
+{
+    Schema::table('animal', function (Blueprint $table) {
+        $table->dropForeign('animal_kind_foreign');
+        $table->dropForeign('animal_owner_foreign');
+        $table->dropColumn('is_accepted');
+    });
+    Schema::dropIfExists('animal');
+}
+
 };

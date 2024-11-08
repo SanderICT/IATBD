@@ -19,6 +19,10 @@ class Animal extends Model
     {
         return $this->hasMany(Review::class, 'animal_id', 'animalID');
     }
+    public function media()
+    {
+        return $this->hasMany(AnimalMedia::class, 'animal_id');
+    }
 }
 
 

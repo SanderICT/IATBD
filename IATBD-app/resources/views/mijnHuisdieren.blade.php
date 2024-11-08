@@ -21,6 +21,11 @@
             <div class="pet-list">
                 @foreach ($animals as $animal)
                     <div class="pet-card">
+                        <!-- Toon de afbeelding van het huisdier -->
+                        <div class="pet-image">
+                            <img src="{{ asset( $animal->media) }}" alt="Foto van {{ $animal->name }}" class="pet-img">
+                        </div>
+
                         <h3>{{ $animal->name }}</h3>
                         <p><strong>Soort:</strong> {{ ucfirst($animal->kind) }}</p>
                         <p><strong>Leeftijd:</strong> {{ $animal->age }} jaar</p>
@@ -31,7 +36,6 @@
                 @endforeach
             </div>
         </section>
-        
     </main>
 </body>
 </html>

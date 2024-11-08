@@ -13,7 +13,7 @@ class AnimalSpeciesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $kind_of_animals_array = ["Dog", "Cat", "Fish", "Bird", "Reptile", "Rabbit", "Hamster", "Guinea Pig"];
+        $kind_of_animals_array = ["hond", "kat", "vis", "vogel", "reptiel", "konijn", "hamster", "kikker", "anders",];
 
         foreach($kind_of_animals_array as $kind){
             DB::table('animal_species')->insert([

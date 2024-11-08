@@ -368,3 +368,21 @@ form button {
     height: auto;
     border-radius: 8px;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.pet-image {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pet-img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Pas dit aan afhankelijk van de gewenste grootte */
+    border-radius: 8px; /* Optioneel voor ronde hoeken */
+}

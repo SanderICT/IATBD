@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('payment', 5, 2);
             $table->integer("durationInHours");
             $table->unsignedBigInteger("owner");
-            $table->longText("note");
+            $table->longText("note")->nullable();
             $table->string("media")->default("/media/Animals/Dog_Breeds.jpg");
             
             // Voeg timestamps toe
